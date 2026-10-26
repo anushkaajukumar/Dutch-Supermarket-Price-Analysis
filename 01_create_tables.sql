@@ -1,12 +1,3 @@
--- ============================================================
--- Dutch Supermarket Price Analysis
--- Step 1: Table schema
--- ============================================================
--- Raw price data was originally in wide format (one column per
--- date) and was reshaped into long format using Power Query
--- (Unpivot) before being imported here via the SSMS Import Wizard.
--- These CREATE TABLE statements document the resulting schema.
--- ============================================================
 
 CREATE TABLE prices_albert_heijn (
     product_id          NVARCHAR(100)   NULL,
@@ -36,5 +27,5 @@ CREATE TABLE prices_lidl (
 --   paths with variable depth, requiring fallback logic during
 --   cleaning in Power Query).
 -- * price_date is NOT NULL since every row originates from a
---   confirmed date column in the source file; all other text
+--   confirmed date column in the source file. all other text
 --   columns allow NULL since real gaps exist in the source data.
