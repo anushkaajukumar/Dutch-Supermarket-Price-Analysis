@@ -8,7 +8,7 @@ SELECT
         WHEN category_clean IN ('Kaas', 'Assortiment kaas') THEN 'Cheese'
     END AS category_group,
     ROUND(AVG(price), 2) AS avg_price,
-    COUNT(*) AS product_count
+    COUNT(*) AS price-records
 FROM combined_prices
 WHERE price_date BETWEEN '2025-11-14' AND '2026-03-12'
 GROUP BY
