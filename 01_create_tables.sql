@@ -24,8 +24,5 @@ CREATE TABLE prices_lidl (
 --   extracted from each store's original nested category path
 --   (Albert Heijn used backslash-separated paths with the real
 --   category at a fixed depth; Lidl used forward-slash-separated
---   paths with variable depth, requiring fallback logic during
+--   paths with variable depth, requiring if/then during
 --   cleaning in Power Query).
--- * price_date is NOT NULL since every row originates from a
---   confirmed date column in the source file. all other text
---   columns allow NULL since real gaps exist in the source data.
