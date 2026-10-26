@@ -1,22 +1,3 @@
--- ============================================================
--- Dutch Supermarket Price Analysis
--- Step 3: Category-level price comparison
--- ============================================================
--- Question: How do prices compare between Albert Heijn (premium)
--- and Lidl (discount) across common grocery categories?
---
--- Lidl's data only covers ~4 months (Nov 2025-Mar 2026), while
--- Albert Heijn's spans 4+ years. To make a fair comparison, both
--- stores are restricted to Lidl's available date range.
---
--- Product categorization also differed structurally between
--- stores (different naming, different levels of granularity),
--- so categories were manually reviewed and only genuinely
--- comparable pairs were grouped together using a CASE expression.
--- Categories with no clear equivalent in both stores are
--- excluded (they return NULL and are filtered out below).
--- ============================================================
-
 SELECT
     store_name,
     CASE
